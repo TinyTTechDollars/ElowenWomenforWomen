@@ -1,0 +1,45 @@
+{
+  "disclaimer": "Not a diagnosis \u2014 discuss health questions with a healthcare provider.",
+  "cycle": "NHANES August 2021-August 2023",
+  "target_interpretation": "Binary survey-derived menstrual-status proxy; not a diagnosis or a four-stage reproductive life-stage model.",
+  "label_rule": {
+    "recent_menstruation": "RHQ031 == 1",
+    "self_reported_natural_menopause": "RHQ031 == 2 AND RHD043 == 7",
+    "known_conditions_excluded_from_both_classes": "RHD280 == 1 OR RHQ305 == 1 OR RHD143 == 1 OR RHQ200 == 1",
+    "missing_condition_fields": "Not interpreted as yes; some missingness is structural because of public-file disclosure restrictions."
+  },
+  "row_flow": {
+    "female_demographic_rows": 6358,
+    "excluded_missing_one_or_more_required_hormones": 2547,
+    "complete_estradiol_testosterone_shbg": 3811,
+    "excluded_missing_bmi": 49,
+    "complete_required_hormones_and_bmi": 3762,
+    "excluded_not_matching_either_candidate_label": 1443,
+    "recent_candidate_before_condition_exclusions": 1301,
+    "menopause_candidate_before_condition_exclusions": 1018,
+    "recent_candidate_excluded_known_condition": 57,
+    "menopause_candidate_excluded_known_condition": 116,
+    "final_labeled_rows": 2146
+  },
+  "known_condition_counts_with_overlap": {
+    "hysterectomy_among_candidates": 112,
+    "both_ovaries_removed_among_candidates": 82,
+    "pregnant_among_candidates": 24,
+    "breastfeeding_among_candidates": 20
+  },
+  "final_class_counts": {
+    "recent_menstruation": 1244,
+    "self_reported_natural_menopause": 902
+  },
+  "final_class_percentages": {
+    "recent_menstruation": 57.97,
+    "self_reported_natural_menopause": 42.03
+  },
+  "model_features_frozen_for_next_phase": [
+    "RIDAGEYR",
+    "BMXBMI",
+    "LBXTST",
+    "LBXSHBG"
+  ],
+  "estradiol_policy": "Required non-missing for cohort consistency and retained for audit, but prohibited as a classification feature."
+}

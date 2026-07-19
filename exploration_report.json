@@ -1,0 +1,38 @@
+{
+  "disclaimer": "Research/awareness use only \u2014 not a diagnosis.",
+  "cycle": "NHANES August 2021-August 2023",
+  "source_rows": {
+    "female_demographics": 6358,
+    "complete_estradiol": 3836,
+    "complete_testosterone": 3838,
+    "complete_shbg": 3864,
+    "complete_all_three_hormones": 3811,
+    "complete_all_three_hormones_and_bmi": 3762
+  },
+  "questionnaire_availability_among_complete_hormone_rows": {
+    "RHQ010": 3004,
+    "RHQ031": 2988,
+    "RHD043": 1657,
+    "RHQ060": 1664,
+    "RHD143": 520,
+    "RHQ200": 487,
+    "RHD280": 2584,
+    "RHQ305": 2582
+  },
+  "candidate_rule_counts_before_final_label_decision": {
+    "not_started_menstruating": 18,
+    "period_in_past_12_months": 1310,
+    "self_reported_natural_menopause": 1025,
+    "both_ovaries_removed": 323
+  },
+  "amenorrhea_reason_counts": {
+    "1": 5,
+    "2": 6,
+    "3": 455,
+    "7": 1025,
+    "9": 159,
+    "77": 3,
+    "99": 4
+  },
+  "important_limitation": "RHQ031 asks whether at least one period occurred in the past 12 months. The public 2021-2023 RHQ file does not contain a cycle irregularity variable, so perimenopause is not directly observable."
+}

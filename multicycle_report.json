@@ -1,0 +1,61 @@
+{
+  "disclaimer": "Not a diagnosis \u2014 discuss health questions with a healthcare provider.",
+  "cycles": [
+    "2013-2014",
+    "2015-2016",
+    "2021-2023"
+  ],
+  "cycle_reports": {
+    "2013-2014": {
+      "female_demographic_rows": 5172,
+      "complete_testosterone_estradiol_shbg": 3235,
+      "complete_hormones_and_bmi": 3199,
+      "recent_candidate": 1397,
+      "menopause_candidate": 643,
+      "recent_excluded_known_condition": 39,
+      "menopause_excluded_known_condition": 45,
+      "final_recent_menstruation": 1358,
+      "final_self_reported_natural_menopause": 598,
+      "final_rows": 1956
+    },
+    "2015-2016": {
+      "female_demographic_rows": 5079,
+      "complete_testosterone_estradiol_shbg": 3517,
+      "complete_hormones_and_bmi": 3492,
+      "recent_candidate": 1494,
+      "menopause_candidate": 709,
+      "recent_excluded_known_condition": 64,
+      "menopause_excluded_known_condition": 64,
+      "final_recent_menstruation": 1430,
+      "final_self_reported_natural_menopause": 645,
+      "final_rows": 2075
+    },
+    "2021-2023": {
+      "female_demographic_rows": 6358,
+      "complete_testosterone_estradiol_shbg": 3811,
+      "complete_hormones_and_bmi": 3762,
+      "recent_candidate": 1301,
+      "menopause_candidate": 1018,
+      "recent_excluded_known_condition": 57,
+      "menopause_excluded_known_condition": 116,
+      "final_recent_menstruation": 1244,
+      "final_self_reported_natural_menopause": 902,
+      "final_rows": 2146
+    }
+  },
+  "final_rows": 6177,
+  "final_class_counts": {
+    "recent_menstruation": 4032,
+    "self_reported_natural_menopause": 2145
+  },
+  "final_class_percentages": {
+    "recent_menstruation": 65.27,
+    "self_reported_natural_menopause": 34.73
+  },
+  "survey_mode_counts": {
+    "CAPI_proxy_permitted": 4031,
+    "ACASI_no_proxy": 2146
+  },
+  "weight_policy": "Unweighted predictive classifier only. source_wtmec2yr is retained as provenance, is not a model input, and is not concatenated into a combined population weight. No population-prevalence claims are made.",
+  "estradiol_policy": "Completeness and audit only; prohibited as a model input."
+}

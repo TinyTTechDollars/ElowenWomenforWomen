@@ -1,0 +1,39 @@
+{
+  "disclaimer": "Not a diagnosis \u2014 discuss health questions with a healthcare provider.",
+  "method": "Native XGBoost TreeSHAP via pred_contribs on the held-out test set; contributions are in raw log-odds space.",
+  "test_rows_explained": 322,
+  "mean_absolute_shap_log_odds": {
+    "RIDAGEYR": 7.087373733520508,
+    "LBXTST": 0.7191722989082336,
+    "LBXSHBG": 0.5396034121513367,
+    "BMXBMI": 0.47260093688964844
+  },
+  "relative_contribution": {
+    "age": 0.8036710023880005,
+    "bmi_testosterone_shbg_combined": 0.1963289976119995,
+    "note": "BMI is an anthropometric feature, not a hormone."
+  },
+  "age_dominance_rule": {
+    "threshold": 0.75,
+    "is_overwhelmingly_dominant": true
+  },
+  "example": {
+    "SEQN": 133511,
+    "actual_target": "self_reported_natural_menopause",
+    "predicted_probability_natural_menopause": 0.9999827146530151
+  },
+  "no_age_ablation": {
+    "triggered": true,
+    "reason": "Age share 0.8037 met the predeclared dominance threshold 0.75.",
+    "features": [
+      "BMXBMI",
+      "LBXTST",
+      "LBXSHBG"
+    ],
+    "model": "XGBClassifier defaults except random_state=42",
+    "same_saved_train_and_test_split": true,
+    "test_accuracy": 0.5993788819875776,
+    "test_majority_class_baseline_accuracy": 0.5807453416149069,
+    "accuracy_gain_over_majority_baseline": 0.01863354037267073
+  }
+}
