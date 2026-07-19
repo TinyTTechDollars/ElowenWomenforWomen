@@ -1,0 +1,88 @@
+{
+  "disclaimer": "Not a diagnosis \u2014 discuss health questions with a healthcare provider.",
+  "method": "Native XGBoost TreeSHAP on all held-out test rows in log-odds space.",
+  "test_rows": 927,
+  "mean_absolute_shap_log_odds": {
+    "age_years": 7.1229248046875,
+    "testosterone_ng_dl": 0.5674138069152832,
+    "shbg_nmol_l": 0.5611546039581299,
+    "bmi": 0.5384470820426941
+  },
+  "relative_contribution": {
+    "age_years": 0.8103495836257935,
+    "testosterone_ng_dl": 0.06455262750387192,
+    "shbg_nmol_l": 0.06384054571390152,
+    "bmi": 0.06125719100236893
+  },
+  "age_share": 0.8103495836257935,
+  "non_age_combined_share": 0.18965041637420654,
+  "source_cycle_shap": {
+    "2013-2014": {
+      "n": 285,
+      "mean_absolute_shap_log_odds": {
+        "age_years": 7.082842826843262,
+        "bmi": 0.49641722440719604,
+        "testosterone_ng_dl": 0.5874238610267639,
+        "shbg_nmol_l": 0.5842639207839966
+      },
+      "relative_contribution": {
+        "age_years": 0.809380054473877,
+        "bmi": 0.05672725290060043,
+        "testosterone_ng_dl": 0.06712688505649567,
+        "shbg_nmol_l": 0.06676578521728516
+      }
+    },
+    "2015-2016": {
+      "n": 303,
+      "mean_absolute_shap_log_odds": {
+        "age_years": 6.940986633300781,
+        "bmi": 0.5562371611595154,
+        "testosterone_ng_dl": 0.5763047933578491,
+        "shbg_nmol_l": 0.5582410097122192
+      },
+      "relative_contribution": {
+        "age_years": 0.8041209578514099,
+        "bmi": 0.06444068998098373,
+        "testosterone_ng_dl": 0.06676554679870605,
+        "shbg_nmol_l": 0.06467283517122269
+      }
+    },
+    "2021-2023": {
+      "n": 339,
+      "mean_absolute_shap_log_odds": {
+        "age_years": 7.31922721862793,
+        "bmi": 0.5578817129135132,
+        "testosterone_ng_dl": 0.5426443815231323,
+        "shbg_nmol_l": 0.5443304181098938
+      },
+      "relative_contribution": {
+        "age_years": 0.8165059089660645,
+        "bmi": 0.06223521754145622,
+        "testosterone_ng_dl": 0.06053539738059044,
+        "shbg_nmol_l": 0.06072348728775978
+      }
+    }
+  },
+  "example": {
+    "respondent_key": "2013-2014:77634",
+    "source_cycle": "2013-2014",
+    "actual_target": "self_reported_natural_menopause",
+    "predicted_probability": 0.9999890327453613
+  },
+  "no_age_ablation": {
+    "features": [
+      "bmi",
+      "testosterone_ng_dl",
+      "shbg_nmol_l"
+    ],
+    "test_accuracy": 0.6504854368932039,
+    "majority_class_baseline_accuracy": 0.6526429341963322,
+    "gain_over_majority_baseline": -0.0021574973031283085,
+    "same_saved_split": true
+  },
+  "single_cycle_comparison": {
+    "single_cycle_age_share": 0.8036710023880005,
+    "multicycle_age_share": 0.8103495836257935,
+    "change_percentage_points": 0.6678581237792969
+  }
+}
