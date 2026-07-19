@@ -1,0 +1,48 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1784412142027,
+      "tag": "0000_third_sinister_six",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1784413687038,
+      "tag": "0001_stiff_gravity",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1784415781026,
+      "tag": "0002_loud_norrin_radd",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1784416520666,
+      "tag": "0003_eminent_blue_marvel",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1784417333693,
+      "tag": "0004_tired_edwin_jarvis",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1784419096255,
+      "tag": "0005_smooth_husk",
+      "breakpoints": true
+    }
+  ]
+}

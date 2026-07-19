@@ -1,0 +1,1 @@
+ALTER TABLE `daily_checkins` ADD `hormone_medication` text DEFAULT 'prefer_not_to_say' NOT NULL;
