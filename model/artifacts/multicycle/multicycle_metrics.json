@@ -1,0 +1,217 @@
+{
+  "disclaimer": "Not a diagnosis \u2014 discuss health questions with a healthcare provider.",
+  "trained_at_utc": "2026-07-18T20:09:10.951480+00:00",
+  "model": {
+    "class": "xgboost.XGBClassifier",
+    "hyperparameters": "Library defaults except random_state=42",
+    "resolved_parameters": {
+      "objective": "binary:logistic",
+      "base_score": null,
+      "booster": null,
+      "callbacks": null,
+      "colsample_bylevel": null,
+      "colsample_bynode": null,
+      "colsample_bytree": null,
+      "device": null,
+      "early_stopping_rounds": null,
+      "enable_categorical": true,
+      "eval_metric": null,
+      "feature_types": null,
+      "feature_weights": null,
+      "gamma": null,
+      "grow_policy": null,
+      "importance_type": null,
+      "interaction_constraints": null,
+      "learning_rate": null,
+      "max_bin": null,
+      "max_cat_threshold": null,
+      "max_cat_to_onehot": null,
+      "max_delta_step": null,
+      "max_depth": null,
+      "max_leaves": null,
+      "min_child_weight": null,
+      "missing": null,
+      "monotone_constraints": null,
+      "multi_strategy": null,
+      "n_estimators": null,
+      "n_jobs": null,
+      "num_parallel_tree": null,
+      "random_state": 42,
+      "reg_alpha": null,
+      "reg_lambda": null,
+      "sampling_method": null,
+      "scale_pos_weight": null,
+      "subsample": null,
+      "tree_method": null,
+      "validate_parameters": null,
+      "verbosity": null
+    }
+  },
+  "reproducibility": {
+    "random_seed": 42,
+    "split": "70% train / 15% validation / 15% test, stratified by class",
+    "resampling": "None; 1.88:1 class ratio treated as mild imbalance",
+    "python": "3.12.13",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.9.0",
+    "xgboost": "3.3.0"
+  },
+  "features": [
+    "age_years",
+    "bmi",
+    "testosterone_ng_dl",
+    "shbg_nmol_l"
+  ],
+  "prohibited_inputs": [
+    "estradiol_pg_ml_audit",
+    "source_cycle",
+    "source_wtmec2yr",
+    "survey_mode"
+  ],
+  "weight_policy": "No survey weight is used as a model input. This is an unweighted classifier and makes no population-prevalence claims.",
+  "split_sizes": {
+    "train": 4323,
+    "validation": 927,
+    "test": 927
+  },
+  "split_class_counts": {
+    "train": {
+      "recent_menstruation": 2822,
+      "self_reported_natural_menopause": 1501
+    },
+    "validation": {
+      "recent_menstruation": 605,
+      "self_reported_natural_menopause": 322
+    },
+    "test": {
+      "recent_menstruation": 605,
+      "self_reported_natural_menopause": 322
+    }
+  },
+  "test_metrics": {
+    "n": 927,
+    "actual_recent_menstruation": 605,
+    "actual_self_reported_natural_menopause": 322,
+    "accuracy": 0.9503775620280475,
+    "precision": 0.9367088607594937,
+    "recall": 0.9192546583850931,
+    "f1": 0.9278996865203761,
+    "confusion_matrix": [
+      [
+        585,
+        20
+      ],
+      [
+        26,
+        296
+      ]
+    ],
+    "single_class_warning": false
+  },
+  "test_metrics_by_subgroup": {
+    "source_cycle": {
+      "2013-2014": {
+        "n": 285,
+        "actual_recent_menstruation": 206,
+        "actual_self_reported_natural_menopause": 79,
+        "accuracy": 0.9403508771929825,
+        "precision": 0.918918918918919,
+        "recall": 0.8607594936708861,
+        "f1": 0.8888888888888888,
+        "confusion_matrix": [
+          [
+            200,
+            6
+          ],
+          [
+            11,
+            68
+          ]
+        ],
+        "single_class_warning": false
+      },
+      "2015-2016": {
+        "n": 303,
+        "actual_recent_menstruation": 200,
+        "actual_self_reported_natural_menopause": 103,
+        "accuracy": 0.9471947194719472,
+        "precision": 0.9393939393939394,
+        "recall": 0.9029126213592233,
+        "f1": 0.9207920792079208,
+        "confusion_matrix": [
+          [
+            194,
+            6
+          ],
+          [
+            10,
+            93
+          ]
+        ],
+        "single_class_warning": false
+      },
+      "2021-2023": {
+        "n": 339,
+        "actual_recent_menstruation": 199,
+        "actual_self_reported_natural_menopause": 140,
+        "accuracy": 0.9616519174041298,
+        "precision": 0.9440559440559441,
+        "recall": 0.9642857142857143,
+        "f1": 0.9540636042402827,
+        "confusion_matrix": [
+          [
+            191,
+            8
+          ],
+          [
+            5,
+            135
+          ]
+        ],
+        "single_class_warning": false
+      }
+    },
+    "survey_mode": {
+      "ACASI_no_proxy": {
+        "n": 339,
+        "actual_recent_menstruation": 199,
+        "actual_self_reported_natural_menopause": 140,
+        "accuracy": 0.9616519174041298,
+        "precision": 0.9440559440559441,
+        "recall": 0.9642857142857143,
+        "f1": 0.9540636042402827,
+        "confusion_matrix": [
+          [
+            191,
+            8
+          ],
+          [
+            5,
+            135
+          ]
+        ],
+        "single_class_warning": false
+      },
+      "CAPI_proxy_permitted": {
+        "n": 588,
+        "actual_recent_menstruation": 406,
+        "actual_self_reported_natural_menopause": 182,
+        "accuracy": 0.9438775510204082,
+        "precision": 0.930635838150289,
+        "recall": 0.8846153846153846,
+        "f1": 0.9070422535211268,
+        "confusion_matrix": [
+          [
+            394,
+            12
+          ],
+          [
+            21,
+            161
+          ]
+        ],
+        "single_class_warning": false
+      }
+    }
+  }
+}
